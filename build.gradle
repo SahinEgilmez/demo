@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'com.segilmez'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    jcenter()
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    // https://mvnrepository.com/artifact/io.github.sahinegilmez/bdd.ai
+    compile group: 'io.github.sahinegilmez', name: 'bdd.ai', version: '0.3.0'
+}
+
+task testRunner(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    main = "runner.BDDRunner"
+}

@@ -1,0 +1,22 @@
+{
+  "environments": {
+    "mobile": {
+      "type": "android",
+      "appPath": "",
+      "appPackage": "com.turkcell.gncplay",
+      "appActivity": "com.turkcell.gncplay.view.activity.SplashActivity",
+      "testaiConfidenceThreshold": 0.2,
+      "imageMatchThreshold": 0.4,
+      "baseScreenWidth": 1080,
+      "baseScreenHeight": 2160,
+      "elementTimeout": 10,
+      "threadCount": 2,
+      "tags": "@allTests",
+      "quickReport": false,
+      "devices": [
+        {"name": "emulator_1", "appiumURL": "http://127.0.0.1:4723/wd/hub", "systemPort":"5023", "udid": "emulator-5554", "platformVersion": 9 },
+        {"name": "emulator_2", "appiumURL": "http://127.0.0.1:4733/wd/hub","systemPort":"5033", "udid": "emulator-5556", "platformVersion": 9 }
+      ]
+    }
+  }
+}
